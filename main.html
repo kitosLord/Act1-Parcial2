@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="interfaz.css">
+</head>
+<body>
+   
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">GESTOR DE TAREAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+      <div class="container py-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+              <div class="mb-3">
+                <label for="taskInput" class="form-label">Tarea</label>
+                <textarea class="form-control" id="taskInput" rows="1"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="responsibleInput" class="form-label">Responsable</label>
+                <textarea class="form-control" id="responsibleInput" rows="1"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="startDateInput" class="form-label">Fecha inicio </label>
+                <input type="date" class="form-control" id="startDateInput">
+              </div>
+              
+              <div class="mb-3">
+                <label for="endDateInput" class="form-label">Fecha fin </label>
+                <input type="date" class="form-control" id="endDateInput" >
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-success" type="button" id="addTaskBtn">Enviar</button>
+              </div>
+           </div>
+
+             <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tareas</th>
+                            <th>Responsable</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskTableBody">
+                        <!-- Tasks will be added here -->
+                    </tbody>
+                </table>
+             </div>
+        </div>
+      </div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
